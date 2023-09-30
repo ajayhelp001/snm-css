@@ -2603,9 +2603,11 @@ img {
 
 .geo_map img {
     -o-object-fit: cover;
-    object-fit: cover;
-    /* min-height: 900px;
-    min-width: 1900px */
+    object-fit: cover
+}
+
+.mapcard {
+    background-color: var(--black--dark) !important
 }
 
 .detailsPostModal .modal-dialog.postmodule {
@@ -2613,14 +2615,15 @@ img {
     width: 100%
 }
 
-.detailsPostModal .modal-dialog .modal-content {
+.modaldesign .modal-dialog .modal-content {
     margin: 0px 20px;
     padding: 16px 24px;
     border: none;
     background-color: var(--neutralBlack)
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .modal-title {
+.modaldesign .modal-dialog .modal-content .modal-header .modal-title {
+    align-items: center;
     color: var(--white);
     font-size: 24px;
     font-style: normal;
@@ -2630,11 +2633,11 @@ img {
     gap: 12px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources {
+.modaldesign .modal-dialog .modal-content .modal-header .sources {
     margin: 12px 0px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup {
     height: 50px;
     padding: 8px 12px;
     border-radius: 8px;
@@ -2652,11 +2655,11 @@ img {
     background-color: var(--black--dark)
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup button {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup button {
     cursor: auto
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg {
     height: 32px;
     min-width: 32px;
     border-radius: 32px;
@@ -2664,49 +2667,49 @@ img {
     overflow: hidden
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg img {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg img {
     -o-object-fit: cover;
     object-fit: cover
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn {
     height: 32px;
     text-overflow: ellipsis;
     font-size: 14px;
     gap: 8px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn .location {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn .location {
     width: 21px;
     height: 21px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation {
     border: 2px solid var(--theme-red)
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation .post_Btn {
+.modaldesign .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation .post_Btn {
     height: 32px;
     margin: 0px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body {
+.modaldesign .modal-dialog .modal-content .modal-body {
     background-color: var(--black--dark);
     padding: 12px;
     border-radius: 8px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .orignalPost {
+.modaldesign .modal-dialog .modal-content .modal-body .orignalPost {
     max-width: 560px;
     width: 100%
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart {
+.modaldesign .modal-dialog .modal-content .modal-body .innerbodypart {
     gap: 8px;
     padding: 12px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postName {
+.modaldesign .modal-dialog .modal-content .modal-body .innerbodypart .postName {
     color: var(--white);
     font-size: 26px;
     font-style: normal;
@@ -2714,7 +2717,7 @@ img {
     line-height: 140%
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postdate {
+.modaldesign .modal-dialog .modal-content .modal-body .innerbodypart .postdate {
     color: var(--white-50);
     font-size: 12px;
     font-style: normal;
@@ -2722,17 +2725,17 @@ img {
     line-height: 140%
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postImg {
+.modaldesign .modal-dialog .modal-content .modal-body .innerbodypart .postImg {
     border-radius: 12px;
     overflow: hidden;
     border: 2px solid var(--white-50)
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .content {
+.modaldesign .modal-dialog .modal-content .modal-body .content {
     gap: 40px
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .content .contentfild {
+.modaldesign .modal-dialog .modal-content .modal-body .content .contentfild {
     color: var(--white);
     font-size: 16px;
     font-style: normal;
@@ -2740,11 +2743,11 @@ img {
     line-height: 160%
 }
 
-.detailsPostModal .modal-dialog .modal-content .modal-body .content .postbutoon button {
+.modaldesign .modal-dialog .modal-content .modal-body .content .postbutoon button {
     cursor: auto
 }
 
-.detailsPostModal .modal-dialog .modal-content .title {
+.modaldesign .modal-dialog .modal-content .title {
     color: var(--netural-dark);
     font-size: 14px;
     font-style: normal;
@@ -2753,13 +2756,30 @@ img {
     margin-bottom: 12px
 }
 
-.detailsPostModal .modal-dialog .modal-content .title.details_title {
+.modaldesign .modal-dialog .modal-content .title.details_title {
     margin-bottom: 8px
 }
 
-.mediapostmodul .modal-dialog .mediaModul {
+.mediapostmodul .modal-dialog.mediaModul {
     max-width: 1565px;
     width: 100%
+}
+
+.mediapostmodul .modal-dialog .modal-content {
+    background-color: var(--black--dark)
+}
+
+.modal .modal-dialog .closeBtn {
+    width: 40px;
+    height: 40px
+}
+
+.modal .modal-dialog .closeBtn img {
+    filter: brightness(0.9)
+}
+
+.modal .modal-dialog .closeBtn:hover img {
+    filter: brightness(1)
 }
 
 .bootomtreackchart {
