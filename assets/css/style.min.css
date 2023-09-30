@@ -1640,155 +1640,6 @@ img {
     max-width: 832px
 }
 
-.detailsPostModal .modal-dialog {
-    max-width: 935px;
-    width: 100%
-}
-
-.detailsPostModal .modal-dialog .modal-content {
-    margin: 0px 20px;
-    padding: 16px 24px;
-    border: none;
-    background-color: var(--neutralBlack)
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .modal-title {
-    color: var(--white);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-    margin-bottom: 12px;
-    gap: 12px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources {
-    margin: 12px 0px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup {
-    height: 50px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    overflow: hidden;
-    color: var(--white);
-    text-overflow: ellipsis;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: -0.5px;
-    background-color: var(--black--dark)
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup button {
-    cursor: auto
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg {
-    height: 32px;
-    min-width: 32px;
-    border-radius: 32px;
-    display: flex;
-    overflow: hidden
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg img {
-    -o-object-fit: cover;
-    object-fit: cover
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn {
-    height: 32px;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    gap: 8px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn .location {
-    width: 21px;
-    height: 21px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation {
-    border: 2px solid var(--theme-red)
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation .post_Btn {
-    height: 32px;
-    margin: 0px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body {
-    background-color: var(--black--dark);
-    padding: 12px;
-    border-radius: 8px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .orignalPost {
-    max-width: 560px;
-    width: 100%
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart {
-    gap: 8px;
-    padding: 12px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postName {
-    color: var(--white);
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postdate {
-    color: var(--white-50);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postImg {
-    border-radius: 12px;
-    overflow: hidden;
-    border: 2px solid var(--white-50)
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .content {
-    gap: 40px
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .content .contentfild {
-    color: var(--white);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%
-}
-
-.detailsPostModal .modal-dialog .modal-content .modal-body .content .postbutoon button {
-    cursor: auto
-}
-
-.detailsPostModal .modal-dialog .modal-content .title {
-    color: var(--netural-dark);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-    margin-bottom: 12px
-}
-
-.detailsPostModal .modal-dialog .modal-content .title.details_title {
-    margin-bottom: 8px
-}
-
 @media screen and (max-width: 1850px) {
     .list_post_Table .list .posttableSide.post_listTable .post_table .table tbody tr td:nth-child(2) {
         max-width: 180px
@@ -2045,6 +1896,21 @@ img {
     width: 100%
 }
 
+.analysisCommentBox .originalComment {
+    padding: 12px;
+    background-color: var(--black--dark) !important
+}
+
+.analysisCommentBox .comment_card {
+    max-width: 476px;
+    width: 100%
+}
+
+.actorListCard {
+    max-width: 380px;
+    width: 100%
+}
+
 .mainpostcard .informationCard .postImg {
     max-height: 300px;
     height: 100%
@@ -2141,6 +2007,25 @@ img {
     color: var(--successful)
 }
 
+.mainpostcard .informationCard .violationTangHeading {
+    color: var(--netural-dark)
+}
+
+.mainpostcard .informationCard .violatinTag {
+    border: 3px solid var(--theme-red);
+    border-radius: 8px;
+    padding: 12px
+}
+
+.mainpostcard .informationCard .violatinTag.bluetag {
+    border-color: var(--active)
+}
+
+.comment_card {
+    position: relative;
+    z-index: 3
+}
+
 .comment_card .comment_item_Body {
     padding: 12px;
     border-radius: 8px;
@@ -2186,20 +2071,23 @@ img {
 }
 
 .comment_card.commitAnswer {
-    position: relative
+    z-index: 1;
+    position: relative;
+    margin-bottom: 8px
 }
 
 .comment_card.commitAnswer::before {
     content: "";
-    height: 50px;
+    height: 100%;
     width: 16px;
     border: 2px solid var(--balck--light);
     border-bottom-left-radius: 10px;
     position: absolute;
-    top: -8px;
+    top: -50%;
     left: 15px;
     border-top: 0px;
-    border-right: 0px
+    border-right: 0px;
+    z-index: -1
 }
 
 .comment_card.commitAnswer .comment_item_Body {
@@ -2219,6 +2107,74 @@ img {
 
 .mapingCard .mapImg {
     cursor: pointer
+}
+
+.actorListCard .card {
+    border: 2px solid var(--theme1)
+}
+
+.userDistentCard {
+    gap: 4px
+}
+
+.userDistentCard .listItem {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 4px
+}
+
+.userDistentCard .listItem:hover {
+    background-color: var(--balck--light)
+}
+
+.userDistentCard .listItem.active {
+    background-color: var(--active)
+}
+
+.userDistentCard .listItem.active:hover {
+    background-color: var(--active)
+}
+
+.userDistentCard .listItem .user_img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%
+}
+
+.userDistentCard .listItem .user_img img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.userDistentCard .listItem .userDetails {
+    color: var(--white);
+    font-style: normal
+}
+
+.userDistentCard .listItem .userDetails .username {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%
+}
+
+.userDistentCard .listItem .userDetails .userAge {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.5px;
+    display: flex;
+    gap: 8px
+}
+
+.userDistentCard .listItem .userDetails .userAge .genderImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px
 }
 
 .selctbox .select2 {
@@ -2522,7 +2478,7 @@ img {
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
-    padding: 4px 8px;
+    padding: 2px 8px;
     border: 1px solid var(--dark-red);
     background-color: var(--theme-red);
     border-radius: 8px;
@@ -2540,6 +2496,27 @@ img {
 .post_Btn span img {
     -o-object-fit: contain;
     object-fit: contain
+}
+
+.post_Btn span.closebtn img {
+    filter: brightness(100)
+}
+
+.post_Btn.small_post_Btn {
+    padding: 4px 12px;
+    font-size: 12px;
+    line-height: 140%
+}
+
+.post_Btn.small_post_Btn span {
+    min-width: 10px;
+    width: 10px;
+    height: 10px
+}
+
+.post_Btn.bluePost_btn {
+    border-color: var(--active);
+    background-color: var(--active)
 }
 
 .sourcesBtn {
@@ -2622,6 +2599,167 @@ img {
     font-weight: 400;
     line-height: 140%;
     color: var(--white)
+}
+
+.geo_map img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* min-height: 900px;
+    min-width: 1900px */
+}
+
+.detailsPostModal .modal-dialog.postmodule {
+    max-width: 935px;
+    width: 100%
+}
+
+.detailsPostModal .modal-dialog .modal-content {
+    margin: 0px 20px;
+    padding: 16px 24px;
+    border: none;
+    background-color: var(--neutralBlack)
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .modal-title {
+    color: var(--white);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 12px;
+    gap: 12px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources {
+    margin: 12px 0px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup {
+    height: 50px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    color: var(--white);
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.5px;
+    background-color: var(--black--dark)
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup button {
+    cursor: auto
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg {
+    height: 32px;
+    min-width: 32px;
+    border-radius: 32px;
+    display: flex;
+    overflow: hidden
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .logoimg img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn {
+    height: 32px;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    gap: 8px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup .categoryBtn .location {
+    width: 21px;
+    height: 21px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation {
+    border: 2px solid var(--theme-red)
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-header .sources .sourcegroup.violation .post_Btn {
+    height: 32px;
+    margin: 0px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body {
+    background-color: var(--black--dark);
+    padding: 12px;
+    border-radius: 8px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .orignalPost {
+    max-width: 560px;
+    width: 100%
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart {
+    gap: 8px;
+    padding: 12px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postName {
+    color: var(--white);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postdate {
+    color: var(--white-50);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .innerbodypart .postImg {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--white-50)
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .content {
+    gap: 40px
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .content .contentfild {
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%
+}
+
+.detailsPostModal .modal-dialog .modal-content .modal-body .content .postbutoon button {
+    cursor: auto
+}
+
+.detailsPostModal .modal-dialog .modal-content .title {
+    color: var(--netural-dark);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 12px
+}
+
+.detailsPostModal .modal-dialog .modal-content .title.details_title {
+    margin-bottom: 8px
+}
+
+.mediapostmodul .modal-dialog .mediaModul {
+    max-width: 1565px;
+    width: 100%
 }
 
 .bootomtreackchart {
