@@ -559,6 +559,37 @@ img {
     width: 100%
 }
 
+.overviewTabs.themetabs .nav-item .nav-link {
+    color: var(--netural-dark)
+}
+
+.overviewTabs.themetabs .nav-item .nav-link.actor::before {
+    background-color: var(--theme1)
+}
+
+.overviewTabs.themetabs .nav-item .nav-link.actor.active,
+.overviewTabs.themetabs .nav-item .nav-link.actor:hover {
+    color: var(--theme1)
+}
+
+.overviewTabs.themetabs .nav-item .nav-link.itemlist::before {
+    background-color: var(--active)
+}
+
+.overviewTabs.themetabs .nav-item .nav-link.itemlist.active,
+.overviewTabs.themetabs .nav-item .nav-link.itemlist:hover {
+    color: var(--active)
+}
+
+.overviewTabs.themetabs .nav-item .nav-link.violation::before {
+    background-color: var(--theme-red)
+}
+
+.overviewTabs.themetabs .nav-item .nav-link.violation.active,
+.overviewTabs.themetabs .nav-item .nav-link.violation:hover {
+    color: var(--theme-red)
+}
+
 .maincontent {
     padding: 40px;
     overflow: hidden
@@ -2606,8 +2637,52 @@ img {
     object-fit: cover
 }
 
+.geo_map .icons-wrap-container {
+    background-color: #00b492;
+    padding: 5px;
+    border-radius: 5px
+}
+
+.geo_map .icons-wrap-container i {
+    color: var(--white)
+}
+
+.geo_map .icons-wrap-container,
+.geo_map .numerice-icon-number {
+    color: var(--white)
+}
+
+.geo_map .zoom-buttons-map {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--neutralBlack)
+}
+
+.geo_map .zoom-buttons-map button {
+    height: 24px;
+    width: 24px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    margin: 0px 12px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px
+}
+
+.geo_map .icon-description-bar {
+    width: 100%;
+    display: block
+}
+
 .mapcard {
     background-color: var(--black--dark) !important
+}
+
+.connectMap>div {
+    width: 100% !important
 }
 
 .detailsPostModal .modal-dialog.postmodule {
@@ -2760,13 +2835,45 @@ img {
     margin-bottom: 8px
 }
 
+.mediapostmodul.maincontent {
+    padding: 20px 0px
+}
+
+.mediapostmodul.maincontent.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center
+}
+
+.mediapostmodul.maincontent .modal-dialog {
+    margin: 0px
+}
+
 .mediapostmodul .modal-dialog.mediaModul {
     max-width: 1565px;
-    width: 100%
+    width: 100%;
+    max-height: 1000px;
+    height: 100%;
+    min-height: 1px
 }
 
 .mediapostmodul .modal-dialog .modal-content {
-    background-color: var(--black--dark)
+    background-color: var(--black--dark);
+    padding: 15px 40px 36px 40px
+}
+
+.mediapostmodul .modal-dialog .modal-content .modal-body .youtubeIMg img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%
+}
+
+.mediapostmodul .modal-dialog .modal-content .modal-body .postdetailslist {
+    max-width: 426px
+}
+
+.mediapostmodul .modal-dialog .modal-content .modal-body .postdetailslist .nav-pills {
+    margin-bottom: 12px
 }
 
 .modal .modal-dialog .closeBtn {
