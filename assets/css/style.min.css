@@ -16,12 +16,14 @@
     --black: #000;
     --white: #fff;
     --white-50: #ffffff80;
+    --white-75: #ffffffbf;
     --checkbox: #00000026;
     --blue: #3B82F6;
     --alert: #F5B060;
     --dark-red: #81251D;
     --light-green: #00FFD1;
-    --light-gray: #BBBABD
+    --light-gray: #BBBABD;
+    --active-dark: #286AA6
 }
 
 @font-face {
@@ -264,6 +266,11 @@ img {
 
 .search_bar.listSearch {
     background-color: var(--balck--light)
+}
+
+.search_bar.darkbar {
+    background-color: var(--black--dark);
+    min-height: 40px
 }
 
 .text-white-50 {
@@ -805,110 +812,6 @@ img {
     gap: 12px
 }
 
-.maincontent .manin_content_Body .informationCard {
-    background-color: var(--black--dark);
-    border-radius: 8px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body {
-    padding: 8px 16px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody {
-    gap: 12px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .card_title {
-    background-color: var(--black--dark);
-    margin: 0px;
-    color: var(--neutral);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted {
-    gap: 8px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .accountPost {
-    color: var(--netural-dark);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    margin-bottom: 4px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .accounts {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .accounts .userName {
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .accountUser {
-    width: 26px;
-    height: 26px;
-    border-radius: 26px;
-    overflow: hidden
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .accountUser img {
-    -o-object-fit: cover;
-    object-fit: cover
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .socialImg {
-    text-align: center;
-    display: flex
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .posted .socialImg img {
-    max-width: 20px;
-    width: 100%
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard {
-    border: 1px solid var(--balck--light)
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard .cardbody>div {
-    border-left: 1px solid var(--balck--light);
-    padding: 4px 0px
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard .cardbody>div:first-child {
-    border-left: none
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard .cardbody .metrics,
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard .cardbody .rate {
-    color: var(--white);
-    text-align: center;
-    font-style: normal
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard .cardbody .metrics {
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 140%
-}
-
-.maincontent .manin_content_Body .informationCard .card-body .innerbody .socialMetricsCard .cardbody .rate {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 160%
-}
-
 .maincontent .manin_content_Body .pichart .card-body .innerbody {
     gap: 16px
 }
@@ -1050,6 +953,110 @@ img {
     justify-content: space-between;
     padding: 4px 0px;
     border-top: 1px solid var(--neutral)
+}
+
+.informationCard {
+    background-color: var(--black--dark);
+    border-radius: 8px
+}
+
+.informationCard .card-body {
+    padding: 8px 16px
+}
+
+.informationCard .card-body .innerbody {
+    gap: 12px
+}
+
+.informationCard .card-body .innerbody .card_title {
+    background-color: var(--black--dark);
+    margin: 0px;
+    color: var(--neutral);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%
+}
+
+.informationCard .card-body .innerbody .posted {
+    gap: 8px
+}
+
+.informationCard .card-body .innerbody .posted .accountPost {
+    color: var(--netural-dark);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 4px
+}
+
+.informationCard .card-body .innerbody .posted .accounts {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px
+}
+
+.informationCard .card-body .innerbody .posted .accounts .userName {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.informationCard .card-body .innerbody .posted .accountUser {
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    overflow: hidden
+}
+
+.informationCard .card-body .innerbody .posted .accountUser img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.informationCard .card-body .innerbody .posted .socialImg {
+    text-align: center;
+    display: flex
+}
+
+.informationCard .card-body .innerbody .posted .socialImg img {
+    max-width: 20px;
+    width: 100%
+}
+
+.informationCard .card-body .innerbody .socialMetricsCard {
+    border: 1px solid var(--balck--light)
+}
+
+.informationCard .card-body .innerbody .socialMetricsCard .cardbody>div {
+    border-left: 1px solid var(--balck--light);
+    padding: 4px 0px
+}
+
+.informationCard .card-body .innerbody .socialMetricsCard .cardbody>div:first-child {
+    border-left: none
+}
+
+.informationCard .card-body .innerbody .socialMetricsCard .cardbody .metrics,
+.informationCard .card-body .innerbody .socialMetricsCard .cardbody .rate {
+    color: var(--white);
+    text-align: center;
+    font-style: normal
+}
+
+.informationCard .card-body .innerbody .socialMetricsCard .cardbody .metrics {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 140%
+}
+
+.informationCard .card-body .innerbody .socialMetricsCard .cardbody .rate {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%
 }
 
 .top_post .card-body .card_title {
@@ -1263,6 +1270,10 @@ img {
     -o-object-fit: contain;
     object-fit: contain;
     width: 100%
+}
+
+.categoryCard .card_body .categoryImg.grayimg img {
+    filter: brightness(1) grayscale(1)
 }
 
 .categoryCard .card_body .valu {
@@ -1864,12 +1875,14 @@ img {
 
 .mediaGallery .mediaImg {
     border-radius: 4px;
-    overflow: hidden
+    overflow: hidden;
+    height: 100%
 }
 
 .mediaGallery .mediaImg img {
     -o-object-fit: cover;
-    object-fit: cover
+    object-fit: cover;
+    height: 100%
 }
 
 .mediaGallery .mediaImg:hover img {
@@ -1907,37 +1920,37 @@ img {
     z-index: 2
 }
 
-.mainpostcard {
+.facebook-postDetails-overview .mainpostcard {
     max-width: 460px;
     width: 100%
 }
 
-.commentcard {
+.facebook-postDetails-overview .commentcard {
     max-width: 412px;
     width: 100%
 }
 
-.postdetailmediacard {
+.facebook-postDetails-overview .postdetailmediacard {
     max-width: 372px;
     width: 100%
 }
 
-.post_detailsMaping_crad {
+.facebook-postDetails-overview .post_detailsMaping_crad {
     max-width: 412px;
     width: 100%
 }
 
-.analysisCommentBox .originalComment {
+.facebook-postDetails-overview .analysisCommentBox .originalComment {
     padding: 12px;
     background-color: var(--black--dark) !important
 }
 
-.analysisCommentBox .comment_card {
+.facebook-postDetails-overview .analysisCommentBox .comment_card {
     max-width: 476px;
     width: 100%
 }
 
-.actorListCard {
+.facebook-postDetails-overview .actorListCard {
     max-width: 380px;
     width: 100%
 }
@@ -2035,6 +2048,18 @@ img {
 }
 
 .mainpostcard .informationCard .socialMetricsCard .cardbody .rate .tredMap.greenzone span {
+    color: var(--successful)
+}
+
+.mainpostcard .informationCard .socialMetricsCard .cardbody .rate .tredMap.grayzone span {
+    color: var(--netural-dark)
+}
+
+.mainpostcard .informationCard .socialMetricsCard .cardbody .rate.lowvalue {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
     color: var(--successful)
 }
 
@@ -2887,6 +2912,508 @@ img {
 
 .modal .modal-dialog .closeBtn:hover img {
     filter: brightness(1)
+}
+
+.basic_information_user .useR_img {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--active)
+}
+
+.basic_information_user .useR_img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.basic_information_user .usrname {
+    color: var(--white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: .5px
+}
+
+.basic_information_user .gender {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.basicinfoCard .content {
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.basicinfoCard .post_table .table thead tr th {
+    height: 48px
+}
+
+.basicinfoCard .post_table .table tbody tr td,
+.basicinfoCard .post_table .table tbody tr th {
+    height: 40px
+}
+
+.basicinfoCard .post_table .table tbody .icon {
+    height: 24px;
+    width: 24px
+}
+
+.basicinfoCard .post_table .table tbody .postContent {
+    max-width: 307px
+}
+
+.socialInformation .socialImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid var(--active);
+    position: relative
+}
+
+.socialInformation .socialImg .useraccountimg {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.socialInformation .socialImg .socialIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -4%;
+    bottom: 0%
+}
+
+.socialInformation .socialImg.tiktok {
+    border-color: var(--white)
+}
+
+.socialInformation .socialImg.youtube {
+    border-color: var(--theme-red)
+}
+
+.socialInformation .socialName {
+    color: var(--white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: .5px
+}
+
+.socialInformation .socialGender {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.socialInformation .socialTab .nav-item .nav-link {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative
+}
+
+.socialInformation .socialTab .nav-item .nav-link::before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--white);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease-in-out .45s
+}
+
+.socialInformation .socialTab .nav-item .nav-link img {
+    width: 100%
+}
+
+.socialInformation .socialTab .nav-item .nav-link.active::before,
+.socialInformation .socialTab .nav-item .nav-link:hover::before {
+    width: 50%;
+    background-color: var(--active)
+}
+
+.socialInformation .socialTab .nav-item .nav-link.active.youtube::before,
+.socialInformation .socialTab .nav-item .nav-link:hover.youtube::before {
+    width: 50%;
+    background-color: var(--theme-red)
+}
+
+.socialInformation .socialTab .nav-item .nav-link.active.tiktok::before,
+.socialInformation .socialTab .nav-item .nav-link:hover.tiktok::before {
+    width: 50%;
+    background-color: var(--white)
+}
+
+.socialInformation .linkcontent {
+    overflow: hidden;
+    color: var(--white-75);
+    text-align: center;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.5px;
+    text-decoration: none
+}
+
+.socialInformation .linkcontent:hover {
+    color: var(--white)
+}
+
+.socialInformation .posts {
+    color: var(--white-50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.socialInformation .follow {
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-top: 4px
+}
+
+.famely_card {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    background-color: var(--black--dark)
+}
+
+.famely_card .user_img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%
+}
+
+.famely_card .user_img img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.famely_card .userDetails {
+    color: var(--white);
+    font-style: normal
+}
+
+.famely_card .userDetails .username {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: .5px
+}
+
+.famely_card .userDetails .userAge {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%
+}
+
+.networkcards {
+    height: calc(33% - 4px)
+}
+
+.networks-card .items {
+    padding: 8px;
+    gap: 8px;
+    display: flex;
+    align-items: start;
+    border-radius: 8px
+}
+
+.networks-card .items:hover {
+    background-color: var(--balck--light)
+}
+
+.networks-card .items .imageside {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.networks-card .items .imageside.network {
+    border-radius: 6.5px;
+    background-color: var(--active-dark)
+}
+
+.networks-card .items .imageside.network img {
+    width: 18px
+}
+
+.networks-card .items .imageside.network.tower {
+    background-color: var(--successful)
+}
+
+.networks-card .items .contentSide {
+    width: 100%
+}
+
+.networks-card .items .contentSide .username,
+.networks-card .items .contentSide .date_time,
+.networks-card .items .contentSide .content {
+    color: var(--white);
+    font-style: normal
+}
+
+.networks-card .items .contentSide .username {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%
+}
+
+.networks-card .items .contentSide .date_time {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.networks-card .items .contentSide .content {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.socialCategoery.informationCard .categoryes .card_body {
+    padding: 8px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px
+}
+
+.socialCategoery.informationCard .categoryes .card_body .categoryImg {
+    width: 32px;
+    height: 32px
+}
+
+.socialCategoery.informationCard .categoryes .card_body .categoryImg img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.socialCategoery.informationCard .categoryes .card_body .categoryImg.grayimg img {
+    filter: brightness(1) grayscale(1)
+}
+
+.socialCategoery.informationCard .categoryes .card_body .valu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    gap: 4px
+}
+
+.socialCategoery.informationCard .categoryes .card_body .valu span {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.socialCategoery.informationCard .socialMetricsCard .cardbody {
+    border: 1px solid var(--balck--light);
+    border-bottom: none;
+    border-right: none
+}
+
+.socialCategoery.informationCard .socialMetricsCard .cardbody>div {
+    border: 1px solid var(--balck--light)
+}
+
+.socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem {
+    padding: 8px 3px
+}
+
+.socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .socialmetrics {
+    font-size: 12px;
+    line-height: 140%
+}
+
+.socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .rate {
+    font-size: 18px;
+    line-height: 140%
+}
+
+.tracking-postDetails-overview .userInfoCard {
+    max-width: 460px;
+    width: 100%
+}
+
+.tracking-postDetails-overview .mediacard {
+    max-width: 540px;
+    width: 100%
+}
+
+.tracking-postDetails-overview .postdetailmediacard {
+    max-width: 372px;
+    width: 100%
+}
+
+.tracking-postDetails-overview .post_detailsMaping_crad {
+    max-width: 308px;
+    width: 100%
+}
+
+.tracking-postDetails-overview .analysisCommentBox .originalComment {
+    padding: 12px;
+    background-color: var(--black--dark) !important
+}
+
+.tracking-postDetails-overview .analysisCommentBox .comment_card {
+    max-width: 476px;
+    width: 100%
+}
+
+.tracking-postDetails-overview .actorListCard {
+    max-width: 380px;
+    width: 100%
+}
+
+@media screen and (max-width: 1800px) {
+    .socialCategoery.informationCard .categoryes .card_body {
+        gap: 8px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .categoryImg {
+        width: 28px;
+        height: 28px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .valu {
+        font-size: 18px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .valu span {
+        font-size: 11px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .socialmetrics {
+        font-size: 10px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .rate {
+        font-size: 15px
+    }
+
+    .informationCard .overviewTabs .nav-item .nav-link {
+        font-size: 15px
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .socialCategoery.informationCard .categoryes .card_body {
+        gap: 6px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .categoryImg {
+        width: 24px;
+        height: 24px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .valu {
+        font-size: 16px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .valu span {
+        font-size: 10px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .socialmetrics {
+        font-size: 10px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .rate {
+        font-size: 13px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .rate .tredMap .tredingImg {
+        width: 16px;
+        height: 16px
+    }
+
+    .informationCard .overviewTabs .nav-item .nav-link {
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .socialCategoery.informationCard .categoryes .card_body {
+        gap: 6px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .categoryImg {
+        width: 24px;
+        height: 24px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .valu {
+        font-size: 16px
+    }
+
+    .socialCategoery.informationCard .categoryes .card_body .valu span {
+        font-size: 10px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard.metrics .cardbody>div {
+        min-width: 50%
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .socialmetrics {
+        font-size: 10px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .rate {
+        font-size: 13px
+    }
+
+    .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .rate .tredMap .tredingImg {
+        width: 16px;
+        height: 16px
+    }
+
+    .informationCard .overviewTabs .nav-item .nav-link {
+        font-size: 13px
+    }
 }
 
 .bootomtreackchart {
