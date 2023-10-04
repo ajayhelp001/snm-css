@@ -971,8 +971,8 @@ img {
 .informationCard .card-body .innerbody .card_title {
     background-color: var(--black--dark);
     margin: 0px;
-    color: var(--neutral);
-    font-size: 16px;
+    color: var(--neutral) !important;
+    font-size: 16px !important;
     font-style: normal;
     font-weight: 700;
     line-height: 160%
@@ -1134,7 +1134,27 @@ img {
 .post_table .table tbody .icon {
     height: 20px;
     width: 20px;
+    min-width: 20px;
     justify-content: center
+}
+
+.post_table .table tbody .icon.closeIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: var(--balck--light);
+    transition: all ease-in-out .3s;
+    box-shadow: 0px 0px 4px 0px var(--black-40)
+}
+
+.post_table .table tbody .icon.closeIcon:hover {
+    background-color: var(--netural-dark)
+}
+
+.post_table .table tbody .icon.eyes {
+    width: 24px;
+    height: 24px;
+    min-width: 24px
 }
 
 .post_table .table tbody .view,
@@ -1245,7 +1265,8 @@ img {
 .categoryCard {
     border-radius: 8px;
     background-color: var(--neutralBlack);
-    max-width: 172px;
+    min-width: 184px;
+    max-width: 184px;
     cursor: pointer;
     transition: all ease-in-out .3s
 }
@@ -1287,7 +1308,8 @@ img {
     font-weight: 700;
     line-height: 120%;
     padding: 0px 14px;
-    gap: 6px
+    gap: 6px;
+    width: 100%
 }
 
 .categoryCard .card_body .valu span {
@@ -1509,16 +1531,26 @@ img {
     background-color: var(--netural-dark) !important
 }
 
-.apendDataTable .list_post_Table .list .card_title .cuntryflage {
+.card_title .cuntryflage {
     display: flex;
     align-items: center;
     gap: 10px
 }
 
-.apendDataTable .list_post_Table .list .card_title .cuntryflage .flage {
+.card_title .cuntryflage .flage {
     display: flex;
     width: 32px;
     height: 32px
+}
+
+.card_title .cuntryflage .flage img {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.card_title .cuntryflage .flage.small {
+    width: 28px;
+    height: 28px
 }
 
 .apendDataTable .list_post_Table .list .posttableSide.post_listTable .post_table .table thead tr th:last-child {
@@ -1531,6 +1563,11 @@ img {
 
 .apendDataTable .list_post_Table .list .posttableSide.post_listTable .post_table .table tbody tr td:last-child {
     width: 80px
+}
+
+.apendDataTable .list_post_Table .list .posttableSide.post_listTable .post_table .table tbody tr td .postContent {
+    text-decoration: none;
+    color: var(--white)
 }
 
 .apendDataTable .list_post_Table .list .posttableSide.post_listTable .post_table .table tbody tr td .postContent.source {
@@ -1794,7 +1831,9 @@ img {
     font-size: 14px;
     display: flex;
     align-items: center;
-    gap: 8px
+    gap: 8px;
+    text-decoration: none;
+    color: var(--white)
 }
 
 .account_datatable .table tbody tr td .source .logoimg {
@@ -1826,10 +1865,6 @@ img {
 
 .account_datatable .table tbody tr td .view .eye img {
     filter: brightness(100)
-}
-
-.account_datatable .table tbody tr td .view .scope img {
-    filter: brightness(0.7)
 }
 
 .account_datatable .table tbody tr:nth-child(2) {
@@ -1944,6 +1979,26 @@ img {
 .facebook-postDetails-overview .analysisCommentBox .originalComment {
     padding: 12px;
     background-color: var(--black--dark) !important
+}
+
+.facebook-postDetails-overview .analysisCommentBox .originalComment .commentitem:hover .leftItemList {
+    min-width: 450px
+}
+
+.facebook-postDetails-overview .analysisCommentBox .originalComment .commentitem:hover .comment_card {
+    max-width: 450px
+}
+
+.facebook-postDetails-overview .analysisCommentBox .originalComment .commentitem:hover .comment_card .comment_item_Body {
+    background-color: var(--neutral)
+}
+
+.facebook-postDetails-overview .analysisCommentBox .originalComment .commentitem .leftItemList {
+    min-width: 476px
+}
+
+.facebook-postDetails-overview .analysisCommentBox .originalComment .violationContent {
+    padding-left: 64px
 }
 
 .facebook-postDetails-overview .analysisCommentBox .comment_card {
@@ -2466,12 +2521,12 @@ img {
 }
 
 .appendBtn.smallappend {
-    height: auto;
-    width: auto
+    width: 37px;
+    height: 24px
 }
 
 .appendBtn.smallappend span {
-    width: 18px
+    width: 14px
 }
 
 .appendBtn.smallappend span img {
@@ -2523,6 +2578,27 @@ img {
     right: 100%;
     top: 50%;
     transform: translateY(-50%)
+}
+
+.postbutoon.longBorder::after {
+    content: "";
+    width: 300%;
+    max-width: 450px;
+    opacity: 1;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 100%;
+    border-bottom: 2px dashed var(--theme-red)
+}
+
+.postbutoon.longBorder::before {
+    background: url(../image/icon/comment-arrow.svg);
+    width: 17px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    background-position: left
 }
 
 .post_Btn {
@@ -2902,6 +2978,56 @@ img {
     margin-bottom: 12px
 }
 
+.appendModal .dialogs {
+    max-width: 600px;
+    width: 100%
+}
+
+.appendModal .dialogs .form .inputGroup {
+    background-color: var(--black--dark);
+    border-radius: 8px;
+    padding: 12px 24px
+}
+
+.appendModal .dialogs .form .inputGroup .form-control {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%
+}
+
+.appendModal .dialogs .form .inputGroup .form-control::-moz-placeholder {
+    color: var(--white)
+}
+
+.appendModal .dialogs .form .inputGroup .form-control::placeholder {
+    color: var(--white)
+}
+
+.appendModal .dialogs .form .inputGroup .label {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--neutral);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.5px
+}
+
+.appendModal .dialogs .form .inputGroup .label::after {
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.modal .modal-dialog .modal-content {
+    border: none;
+    background-color: var(--neutralBlack)
+}
+
 .modal .modal-dialog .closeBtn {
     width: 40px;
     height: 40px
@@ -3074,6 +3200,7 @@ img {
     text-align: center;
     text-overflow: ellipsis;
     font-style: normal;
+    font-size: 14px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: -0.5px;
@@ -3149,11 +3276,7 @@ img {
     gap: 8px;
     display: flex;
     align-items: start;
-    border-radius: 8px
-}
-
-.networks-card .items:hover {
-    background-color: var(--balck--light)
+    border-radius: 4px
 }
 
 .networks-card .items .imageside {
@@ -3209,8 +3332,12 @@ img {
     line-height: 140%
 }
 
+.networks-card.hoverd .items:hover {
+    background-color: var(--balck--light)
+}
+
 .socialCategoery.informationCard .categoryes .card_body {
-    padding: 8px 3px;
+    padding: 9.61px 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3262,7 +3389,7 @@ img {
 }
 
 .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem {
-    padding: 8px 3px
+    padding: 9.61px 3px
 }
 
 .socialCategoery.informationCard .socialMetricsCard .cardbody .growthItem .socialmetrics {
