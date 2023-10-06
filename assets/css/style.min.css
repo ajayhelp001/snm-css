@@ -23,7 +23,8 @@
     --dark-red: #81251D;
     --light-green: #00FFD1;
     --light-gray: #BBBABD;
-    --active-dark: #286AA6
+    --active-dark: #286AA6;
+    --dark-gray: #aaaaaa
 }
 
 @font-face {
@@ -194,6 +195,10 @@ img {
 
 .gap-12 {
     gap: 12px !important
+}
+
+.gap-10 {
+    gap: 10px
 }
 
 .gap-8 {
@@ -995,6 +1000,10 @@ img {
     margin-bottom: 4px
 }
 
+.informationCard .card-body .innerbody .posted .accountPost.light {
+    color: var(--dark-gray)
+}
+
 .informationCard .card-body .innerbody .posted .accounts {
     display: flex;
     align-items: center;
@@ -1006,7 +1015,10 @@ img {
     max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 140%
 }
 
 .informationCard .card-body .innerbody .posted .accountUser {
@@ -1431,6 +1443,10 @@ img {
 
 .newsFilterCard {
     width: 280px
+}
+
+.newsFilterCard.acc_filter_Sm {
+    max-width: 256px
 }
 
 .newsFilterCard .card-body .innerBody {
@@ -2021,9 +2037,25 @@ img {
     width: 100%
 }
 
+.facebook-postDetails-overview .mainpostcard.ytubemainPost {
+    max-width: 676px
+}
+
+.facebook-postDetails-overview .mainpostcard.ytubeAnalysisPost {
+    max-width: 420px
+}
+
+.facebook-postDetails-overview .mainpostcard.ytubemainVideoPost {
+    max-width: 859PX
+}
+
 .facebook-postDetails-overview .commentcard {
     max-width: 412px;
     width: 100%
+}
+
+.facebook-postDetails-overview .commentcard.ytubeOverComment {
+    max-width: 600px
 }
 
 .facebook-postDetails-overview .postdetailmediacard {
@@ -2082,6 +2114,10 @@ img {
     height: 100%
 }
 
+.mainpostcard .informationCard .postImg.vidoPost {
+    max-height: unset
+}
+
 .mainpostcard .informationCard .postDetails {
     color: var(--white);
     font-size: 16px;
@@ -2092,6 +2128,17 @@ img {
 
 .mainpostcard .informationCard .postDetails span {
     color: var(--light-gray)
+}
+
+.mainpostcard .informationCard .postDetails.postDetails_sm {
+    font-size: 13.134px;
+    line-height: 130%
+}
+
+.mainpostcard .informationCard .postDetails.ytubeCVideoPostDetails {
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.2px
 }
 
 .mainpostcard .informationCard .postAllDetails {
@@ -2116,6 +2163,11 @@ img {
 
 .mainpostcard .informationCard .postAllDetails .detailImg img {
     width: 100%
+}
+
+.mainpostcard .informationCard .postAllDetails .detailImg.ytubeVideoDetailsImg {
+    height: 20px;
+    width: 20px
 }
 
 .mainpostcard .informationCard .socialMetricsCard .cardbody .items {
@@ -2180,7 +2232,11 @@ img {
 }
 
 .mainpostcard .informationCard .violationTangHeading {
-    color: var(--netural-dark)
+    color: var(--netural-dark);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%
 }
 
 .mainpostcard .informationCard .violatinTag {
@@ -2191,6 +2247,19 @@ img {
 
 .mainpostcard .informationCard .violatinTag.bluetag {
     border-color: var(--active)
+}
+
+.mainpostcard .informationCard .card-body .innerbody .posted .accountUser {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%
+}
+
+.mainpostcard .informationCard .card-body .innerbody .posted .accountUser.videoAccountUser {
+    width: 40px;
+    min-width: 40px;
+    height: 40px
 }
 
 .comment_card {
@@ -2359,6 +2428,89 @@ img {
     justify-content: center;
     width: 16px;
     height: 16px
+}
+
+.userDistentCard .listItem .userside {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.userDistentCard .listItem .times {
+    color: var(--netural-dark);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%
+}
+
+.userDistentCard .tmgroup {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--black--dark)
+}
+
+.userDistentCard .tmgroup .timing_value {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    min-height: 24px;
+    padding: 0px 8px;
+    border: 1px solid var(--black--dark);
+    background-color: var(--balck--light);
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%
+}
+
+.userDistentCard.nonhover .listItem:hover {
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.ytubevideoDetaisl_comment {
+    max-width: 996px;
+    width: 100%
+}
+
+.ytube-videoDetails-overview .analysisCard {
+    max-width: 432px
+}
+
+@media screen and (min-width: 1800px) {
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items .rate {
+        font-size: 20px
+    }
+
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items .rate .tredMap .tredingImg {
+        width: 24px;
+        height: 24px
+    }
+
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items .rate .tredMap span {
+        font-size: 16px
+    }
+}
+
+@media screen and (max-width: 1799.98px) {
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items {
+        min-width: 33%
+    }
+
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items:first-child,
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items:nth-child(2),
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items:nth-child(3) {
+        border-bottom: 1px solid var(--balck--light) !important
+    }
+
+    .informationCard.youtubeVideoOverview .ytubeVideoOverview_socialM.socialMetricsCard .cardbody .items.liftBorder-0 {
+        border-left: 0px
+    }
 }
 
 .selctbox .select2 {
@@ -2820,6 +2972,32 @@ img {
     padding: 0px 6px
 }
 
+.radiobutton_group .btn-check:checked+.radiobutton_label {
+    background-color: var(--neutral)
+}
+
+.radiobutton_group .radiobutton_label {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 2px 12px;
+    border: 1px solid var(--black--dark);
+    background-color: var(--balck--light);
+    box-shadow: 0px 0px 4px 0px var(--black-40);
+    color: var(--white);
+    font-size: 12px;
+    font-style: normal;
+    min-height: 24px;
+    font-weight: 400;
+    line-height: 140%;
+    border-radius: 8px;
+    transition: all ease-in-out .3s;
+    cursor: pointer
+}
+
+.radiobutton_group .radiobutton_label:hover {
+    background-color: var(--neutral)
+}
+
 .geo_map img {
     -o-object-fit: cover;
     object-fit: cover
@@ -2867,6 +3045,11 @@ img {
 
 .mapcard {
     background-color: var(--black--dark) !important
+}
+
+.connectMap {
+    background-color: var(--black--dark);
+    border-radius: 8px
 }
 
 .connectMap>div {
@@ -3177,12 +3360,12 @@ img {
 }
 
 .basicinfoCard .post_table .table thead tr th {
-    height: 48px
+    height: 34px
 }
 
 .basicinfoCard .post_table .table tbody tr td,
 .basicinfoCard .post_table .table tbody tr th {
-    height: 40px
+    height: 34px
 }
 
 .basicinfoCard .post_table .table tbody .icon {
@@ -3191,7 +3374,7 @@ img {
 }
 
 .basicinfoCard .post_table .table tbody .postContent {
-    max-width: 307px
+    max-width: 300px
 }
 
 .socialInformation .socialImg {
@@ -3560,6 +3743,10 @@ img {
     .informationCard .overviewTabs .nav-item .nav-link {
         font-size: 15px
     }
+
+    .basicinfoCard .post_table .table tbody .postContent {
+        max-width: 270px
+    }
 }
 
 @media screen and (max-width: 1700px) {
@@ -3635,6 +3822,10 @@ img {
 
     .informationCard .overviewTabs .nav-item .nav-link {
         font-size: 13px
+    }
+
+    .basicinfoCard .post_table .table tbody .postContent {
+        max-width: 250px
     }
 }
 
