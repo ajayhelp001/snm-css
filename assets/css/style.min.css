@@ -277,6 +277,10 @@ img {
     color: var(--white-50)
 }
 
+.cursor {
+    cursor: pointer
+}
+
 .asideBar {
     padding: 16px 0px;
     background-color: var(--superDark)
@@ -332,7 +336,7 @@ img {
 
 .topheader .socialNetwork {
     padding: 12px 0px 12px 32px;
-    color: var(--neutral);
+    color: var(--netural-dark);
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -533,7 +537,7 @@ img {
 
 .overviewTabs .nav-item .nav-link {
     box-shadow: none;
-    color: var(--neutral);
+    color: var(--netural-dark);
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -971,7 +975,7 @@ img {
 .informationCard .card-body .innerbody .card_title {
     background-color: var(--black--dark);
     margin: 0px;
-    color: var(--neutral) !important;
+    color: var(--netural-dark) !important;
     font-size: 16px !important;
     font-style: normal;
     font-weight: 700;
@@ -1059,6 +1063,44 @@ img {
     line-height: 160%
 }
 
+.informationCard .bootomcard,
+.informationCard .show_bootomcard {
+    display: none
+}
+
+.informationCard .bootomcard.show,
+.informationCard .show_bootomcard.show {
+    display: flex
+}
+
+.informationCard .show_title_bootomcard .viewDetailsBtn,
+.informationCard .show_title_bootomcard .bodypart,
+.informationCard .show_title_bootomcard2 .viewDetailsBtn,
+.informationCard .show_title_bootomcard2 .bodypart {
+    display: none
+}
+
+.informationCard .show_title_bootomcard.show .viewDetailsBtn,
+.informationCard .show_title_bootomcard.show .bodypart,
+.informationCard .show_title_bootomcard2.show .viewDetailsBtn,
+.informationCard .show_title_bootomcard2.show .bodypart {
+    display: flex
+}
+
+.active_data_show .table tbody tr,
+.active_show .table tbody tr {
+    cursor: pointer
+}
+
+.active_data_show .d_bottomBody,
+.active_show .d_bottomBody {
+    min-height: calc(100% - 376px)
+}
+
+.active_data_show .fb_most_bottomBody {
+    min-height: calc(100% - 336px)
+}
+
 .top_post .card-body .card_title {
     display: flex;
     align-items: center;
@@ -1078,6 +1120,10 @@ img {
     position: relative;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px
+}
+
+.post_table.minidatatable.fb_post_minidatatable {
+    max-height: 320px
 }
 
 .post_table .table {
@@ -1149,6 +1195,10 @@ img {
 
 .post_table .table tbody .icon.closeIcon:hover {
     background-color: var(--netural-dark)
+}
+
+.post_table .table tbody .icon.closeIcon.scope img {
+    filter: brightness(0.5)
 }
 
 .post_table .table tbody .icon.eyes {
@@ -1343,6 +1393,10 @@ img {
     -o-object-fit: cover;
     object-fit: cover;
     filter: brightness(0.2)
+}
+
+.pageLinks .socialLinkLink.tiktok {
+    transition: all ease-in-out 0s
 }
 
 .pageLinks .socialLinkLink:hover,
@@ -1596,8 +1650,8 @@ img {
     background-color: var(--netural-dark)
 }
 
-.apendDataTable .list_post_Table .list .posttableSide.post_listTable .post_table .table.table-hover>tbody>tr:hover td .view .icon.scope img {
-    filter: brightness(1)
+.apendDataTable .list_post_Table .list .posttableSide.post_listTable .post_table .table tbody tr td .view .icon.scope img {
+    filter: brightness(0.5)
 }
 
 .infopost.table thead tr th:last-child {
@@ -1833,7 +1887,9 @@ img {
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: var(--white)
+    color: var(--white);
+    position: relative;
+    z-index: 2
 }
 
 .account_datatable .table tbody tr td .source .logoimg {
@@ -1867,6 +1923,10 @@ img {
     filter: brightness(100)
 }
 
+.account_datatable .table tbody tr td .view .scope img {
+    filter: brightness(0.5)
+}
+
 .account_datatable .table tbody tr:nth-child(2) {
     cursor: pointer
 }
@@ -1880,10 +1940,6 @@ img {
     background-color: var(--netural-dark) !important
 }
 
-.account_datatable .table.table-hover>tbody>tr:hover td .view .scope img {
-    filter: brightness(1)
-}
-
 .facebook-postlist-data .midtableGroup {
     max-width: calc(100% - 628px)
 }
@@ -1894,6 +1950,10 @@ img {
 
 .facebook-postlist-data .insteractionCard .post_table .table tbody .postContent {
     max-width: 170px
+}
+
+.facebook-postlist-data .insteractionCard .post_table .table .th_interaction {
+    width: 92px
 }
 
 .informationCard.fb_info .socialMetricsCard .cardbody>div:first-child,
@@ -2151,9 +2211,10 @@ img {
 }
 
 .comment_card .comment_item_Body .commitUser {
-    height: 27px;
-    min-width: 27px;
-    border-radius: 27px;
+    height: 32px;
+    min-width: 32px;
+    width: 32px;
+    border-radius: 50%;
     display: flex;
     overflow: hidden
 }
@@ -2162,6 +2223,12 @@ img {
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover
+}
+
+.comment_card .comment_item_Body .commitUser.commitUsersm {
+    width: 27px;
+    height: 27px;
+    min-width: 27px
 }
 
 .comment_card .comment_item_Body .content_side .userName,
@@ -2178,8 +2245,13 @@ img {
     line-height: 140%
 }
 
+.comment_card .comment_item_Body .content_side .userName {
+    font-weight: 600
+}
+
 .comment_card .comment_item_Body .content_side .tag {
-    color: var(--active)
+    color: var(--active);
+    word-break: break-all
 }
 
 .comment_card.commitAnswer {
@@ -2734,6 +2806,20 @@ img {
     color: var(--white)
 }
 
+.form-check.scopcheck {
+    justify-content: center;
+    gap: 0px
+}
+
+.form-check.scopcheck .form-check-input:checked+label .icon.scope img {
+    filter: brightness(1) !important
+}
+
+.form-check.scopcheck label {
+    cursor: pointer;
+    padding: 0px 6px
+}
+
 .geo_map img {
     -o-object-fit: cover;
     object-fit: cover
@@ -2790,6 +2876,14 @@ img {
 .detailsPostModal .modal-dialog.postmodule {
     max-width: 935px;
     width: 100%
+}
+
+.detailsPostModal .modal-dialog.postmodule .modal-body .orignalPostHeader {
+    position: sticky;
+    top: 0;
+    background-color: var(--black--dark);
+    padding-top: 12px;
+    z-index: 5
 }
 
 .modaldesign .modal-dialog .modal-content {
